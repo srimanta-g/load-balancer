@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Balancer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <style>
+
+        body, html {
+            height: 100%;
+        }
+
+        .header {
+            display : flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .request-container {
+            display: flex;
+            margin: 10px;
+            flex-grow: 1;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .single-server {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        /* .single-server   {
+            margin: 0px;
+        } */
+
+        .active-requests {
+            flex-grow: 1;
+            margin-bottom: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .server-number {
+            padding: 10px;
+            background-color: aqua;
+            border-radius: 5px;
+            width: 80px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .request {
+            padding: 10px;
+            background-color: greenyellow;
+            border-radius: 5px;
+            width: 80px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 5px;
+        }
+
+        /* .single-server-text {
+            /* display:inline-block; */
+        /* } */
+
+        .single-server-progress-div {
+            width: 100%;
+        }
+
+    </style>
+    <script type="text/javascript" src="js/serverUtils.js"></script>
+    <script type="text/javascript" src="js/requestUtils.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="display-4">Load Balancer algorithm visualizer</div>
+            <button class="btn btn-primary" onclick="sendRequest()">send request</button>
+        </div>
+        <div class="request-container">
+
+            <div class="single-server">
+                <div class="active-requests" id="server-one"></div>
+                <div class="server-number">S1</div>
+            </div>
+            <div class="single-server">
+                <div class="active-requests" id="server-two"></div>
+                <div class="server-number">S2</div>
+            </div>
+            <div class="single-server">
+                <div class="active-requests" id="server-three"></div>
+                <div class="server-number">S3</div>
+            </div>
+            <div class="single-server">
+                <div class="active-requests" id="server-four"></div>
+                <div class="server-number">S4</div>
+            </div>
+            <div class="single-server">
+                <div class="active-requests" id="server-five"></div>
+                <div class="server-number">S5</div>
+            </div>
+            <div class="single-server">
+                <div class="active-requests" id="server-six"></div>
+                <div class="server-number">S6</div>
+            </div>
+            <div class="single-server">
+                <div class="active-requests" id="server-seven"></div>
+                <div class="server-number">S7</div>
+            </div>
+            <div class="single-server">
+                <div class="active-requests" id="server-eight"></div>
+                <div class="server-number">S8</div>
+            </div>
+            <div class="single-server">
+                <div class="active-requests" id="server-nine"></div>
+                <div class="server-number">S9</div>
+            </div>
+            <div class="single-server">
+                <div class="active-requests" id="server-ten"></div>
+                <div class="server-number">S10</div>
+            </div>
+
+
+        </div>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
